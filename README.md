@@ -9,7 +9,7 @@ This build is built, tested and released by travis.
 
 Checkout the API Spec [here](http://microservices-demo.github.io/api/index?url=https://raw.githubusercontent.com/microservices-demo/carts/master/api-spec/cart.json)
 
-#### Build
+#### Build..
 
 ## Java
 
