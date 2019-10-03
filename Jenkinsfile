@@ -24,7 +24,8 @@ node {
   }
    
   stage('Deploy') {
-     sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/carts/target/carts.jar jenkins@jenkins:~'
-     sh 'ssh -o StrictHostKeyChecking=no jenkins@jenkins sudo systemctl restart carts'
+     sh 'ssh -o StrictHostKeyChecking=no jenkins@carts sudo systemctl stop carts'
+     sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/carts/target/carts.jar jenkins@carts:~'
+     sh 'ssh -o StrictHostKeyChecking=no jenkins@carts sudo systemctl start carts'
        }
 }
